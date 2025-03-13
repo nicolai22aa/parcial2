@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #ddd;
+}
+
+#gameBoard {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 2px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #bbb;
+  border: 1px solid #999;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.cell.revealed {
+  background-color: #eee;
+  cursor: default;
+}
+
+.cell.mine {
+  background-color: red;
+}
+
+.cell.flag {
+  background-color: #bbb;
+  color: red;
+  font-weight: bold;
+}
